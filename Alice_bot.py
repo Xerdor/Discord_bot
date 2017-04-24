@@ -1,3 +1,4 @@
+import json
 import traceback
 import discord
 
@@ -6,7 +7,11 @@ import Alice_commands
 from discord.message import Message
 
 client = discord.Client()
-opus_location = "C:\\Users\\kevin\\Desktop\\opusfile-0.7-win32\\libopus-0"
+
+with open('config', 'r') as configfile:
+    config = json.load(configfile)
+
+opus_location = config["opus_location"]
 command_tag = ";;"
 
 

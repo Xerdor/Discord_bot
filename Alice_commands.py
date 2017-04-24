@@ -11,7 +11,6 @@ async def join(message: Message, client: Client):
 
     if client.is_voice_connected(message.server) is True:
         print("Replace with fail safe.")
-        print(discord.Client.is_voice_connected)
     else:
         for channel in message.server.channels:
             if channel.type == discord.ChannelType.voice:
@@ -23,9 +22,7 @@ async def join(message: Message, client: Client):
 
         if found_member:
             voice_channels[0]
-            print(discord.Client.is_voice_connected)
         else:
-            print(discord.Client.is_voice_connected)
             return message.author.mention + " not in a channel"
 
 
