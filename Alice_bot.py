@@ -45,5 +45,5 @@ async def on_message(message: Message):
 
 with open('token', 'r') as token:
 
-    token_string = token.read()
+    token_string = token.readline()
 client.run(token_string)
