@@ -17,6 +17,8 @@ async def join(message: Message, client: Client):
                 if message.author in channel.voice_members:
 
                     voice_channels.append( await client.join_voice_channel(channel))
+                    player = voice_channels[0].create_ytdl_player('https://www.youtube.com/watch?v=C9yO0k_QauY')
+                    player.start()
                     found_member = True
                     break
 
